@@ -1,0 +1,149 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颉美智能 - 智能制造专家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- 导航 -->
+    <nav class="bg-blue-900 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-white text-2xl font-bold">颉美智能</a>
+                <!-- Hamburger (checkbox hack) -->
+                <input id="menu-toggle" type="checkbox" class="peer hidden" />
+                <label for="menu-toggle" class="md:hidden flex items-center cursor-pointer text-gray-200 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <!-- Menu -->
+                <div
+                    class="hidden md:flex items-center space-x-8 peer-checked:flex peer-checked:flex-col peer-checked:absolute peer-checked:top-16 peer-checked:left-0 peer-checked:w-full peer-checked:bg-blue-900 peer-checked:z-10">
+                    <a href="index.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">首页</a>
+                    <a href="about.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">关于我们</a>
+                    <a href="products.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">产品中心</a>
+                    <a href="cases.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">工程案例</a>
+                    <a href="support.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">技术支持</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                <!-- 联系我们 / Contact Us -->
+                <section class="flex-1 py-12 px-4 md:px-8 bg-white rounded-2xl shadow-lg">
+                    <!-- 标题 / Title -->
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                            联系我们 <span class="text-gray-500 font-normal">/ Contact Us</span>
+                        </h1>
+                        <p class="text-gray-600 md:text-lg">
+                            我们随时为您提供帮助 / We're here to help you anytime
+                        </p>
+                    </div>
+                    <!-- 内容容器 / Content Container -->
+                    <div class="space-y-6">
+                        <!-- 地址 / Address -->
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">
+                                    地址 / Address
+                                </h3>
+                                <p class="text-gray-600">
+                                    北京市朝阳区某某路123号<br>
+                                    123 Some Road, Chaoyang District, Beijing
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 电话 / Phone -->
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <i class="fas fa-phone text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">
+                                    电话 / Phone
+                                </h3>
+                                <p class="text-gray-600">
+                                    +86 010-1234 5678<br>
+                                    +1 (555) 123-4567
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 邮箱 / Email -->
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">
+                                    邮箱 / Email
+                                </h3>
+                                <p class="text-gray-600">
+                                    cn.support@example.com<br>
+                                    global@example.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 发展历程 / Development History -->
+                <div class="flex-1 bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-6">发展历程</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <div class="text-sm text-gray-500">2017年</div>
+                            <div class="font-medium">
+                                7月成立昆山百斯赛勒机电科技有限公司，致力于工业自动化智能升级与服务9月正式与台达进行深入合作，依托机器人、视觉、伺服等产品承揽自动化项目公司进入发展阶段</div>
+                        </div>
+
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <div class="text-sm text-gray-500">2018年</div>
+                            <div class="font-medium">10月成立系统集成部</div>
+                        </div>
+
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <div class="text-sm text-gray-500">2019年</div>
+                            <div class="font-medium">组建昆山工厂</div>
+                        </div>
+
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <div class="text-sm text-gray-500">2019年</div>
+                            <div class="font-medium">1月正式与禾川，步科进行深入合作 </div>
+                        </div>
+
+                        <div class="border-l-4 border-blue-600 pl-4">
+                            <div class="text-sm text-gray-500">2020年</div>
+                            <div class="font-medium">1月组建视觉系统研发部3月成立上海颉美智能设备有限公司，服务于沪杭区域
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('bg-blue-700');
+                link.classList.remove('hover:bg-blue-700');
+            }
+        });
+    </script>
+</body>
+
+</html>

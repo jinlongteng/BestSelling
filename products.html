@@ -1,0 +1,219 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颉美智能 - 智能制造专家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+     <!-- 导航 -->
+    <nav class="bg-blue-900 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+            <a href="#" class="text-white text-2xl font-bold">颉美智能</a>
+            <!-- Hamburger (checkbox hack) -->
+            <input id="menu-toggle" type="checkbox" class="peer hidden" />
+            <label for="menu-toggle" class="md:hidden flex items-center cursor-pointer text-gray-200 text-2xl">
+                <i class="fas fa-bars"></i>
+            </label>
+            <!-- Menu -->
+            <div class="hidden md:flex items-center space-x-8 peer-checked:flex peer-checked:flex-col peer-checked:absolute peer-checked:top-16 peer-checked:left-0 peer-checked:w-full peer-checked:bg-blue-900 peer-checked:z-10">
+                <a href="index.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">首页</a>
+                <a href="about.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">关于我们</a>
+                <a href="products.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">产品中心</a>
+                <a href="cases.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">工程案例</a>
+                <a href="support.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">技术支持</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="mb-8 border-b border-gray-200">
+            <div class="flex flex-wrap gap-2">
+                <div class="product-tab active" data-category="lighting">工业光源</div>
+                <div class="product-tab" data-category="controller">智能控制器</div>
+                <div class="product-tab" data-category="vision">视觉系统</div>
+            </div>
+        </div>
+
+              <!-- 工业光源 -->
+        <section class="product-category active" data-category="lighting">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                <i class="fas fa-lightbulb mr-2"></i>工业光源系列
+            </h2>
+
+            <!-- 环形光源 -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <div class="flex items-center mb-4">
+                    <img src="https://source.unsplash.com/100x100/?led,ring" 
+                         class="w-20 h-20 object-cover rounded-lg mr-4">
+                    <div>
+                        <h3 class="text-xl font-semibold">RL系列环形光源</h3>
+                        <p class="text-gray-600">适用于精密元件表面检测</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-medium mb-2">技术参数</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>工作电压：24VDC ±10%</li>
+                            <li>色温：6000-6500K</li>
+                            <li>防护等级：IP65</li>
+                            <li>使用寿命：≥30,000小时</li>
+                        </ul>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-blue-50">
+                                <tr>
+                                    <th class="p-2 text-left">型号</th>
+                                    <th class="p-2">内径</th>
+                                    <th class="p-2">外径</th>
+                                    <th class="p-2">功率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-2">RL-5428</td>
+                                    <td class="p-2">Φ62mm</td>
+                                    <td class="p-2">Φ122mm</td>
+                                    <td class="p-2">28W</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-2">RL-7535</td>
+                                    <td class="p-2">Φ85mm</td>
+                                    <td class="p-2">Φ150mm</td>
+                                    <td class="p-2">35W</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 条形光源 -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <img src="https://source.unsplash.com/100x100/?led,strip" 
+                         class="w-20 h-20 object-cover rounded-lg mr-4">
+                    <div>
+                        <h3 class="text-xl font-semibold">SL系列条形光源</h3>
+                        <p class="text-gray-600">长距离线性照明解决方案</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-medium mb-2">产品特点</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li>可多角度自由组合</li>
+                                <li>支持亮度无极调节</li>
+                                <li>多种色温可选</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">典型应用</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-900 rounded-full text-sm">LCD检测</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-900 rounded-full text-sm">金属表面检测</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-900 rounded-full text-sm">包装印刷检测</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <thead class="bg-blue-50">
+                                <tr>
+                                    <th class="p-2">型号</th>
+                                    <th class="p-2">长度</th>
+                                    <th class="p-2">照射角度</th>
+                                    <th class="p-2">功率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-2">SL-150</td>
+                                    <td class="p-2">150mm</td>
+                                    <td class="p-2">30°</td>
+                                    <td class="p-2">15W</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-2">SL-300</td>
+                                    <td class="p-2">300mm</td>
+                                    <td class="p-2">45°</td>
+                                    <td class="p-2">30W</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 智能控制器 -->
+        <section class="product-category hidden" data-category="controller">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                <i class="fas fa-microchip mr-2"></i>智能控制器系列
+            </h2>
+            
+            <!-- 控制器内容 -->
+        </section>
+
+        <!-- 视觉系统 -->
+        <section class="product-category hidden" data-category="vision">
+            <h2 class="text-2xl font-bold text-blue-900 mb-6">
+                <i class="fas fa-eye mr-2"></i>机器视觉系统
+            </h2>
+            
+            <!-- 视觉系统内容 -->
+        </section>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('bg-blue-700');
+                link.classList.remove('hover:bg-blue-700');
+            }
+        });
+         // 产品分类切换
+        document.querySelectorAll('.product-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 切换标签状态
+                document.querySelectorAll('.product-tab').forEach(t => 
+                    t.classList.remove('active')
+                );
+                this.classList.add('active');
+
+                // 切换内容显示
+                const category = this.dataset.category;
+                document.querySelectorAll('.product-category').forEach(section => {
+                    section.classList.add('hidden');
+                    if(section.dataset.category === category) {
+                        section.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+
+        // 表格响应式处理
+        function initTables() {
+            document.querySelectorAll('table').forEach(table => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'overflow-x-auto scrollbar-hide';
+                table.parentNode.insertBefore(wrapper, table);
+                wrapper.appendChild(table);
+            });
+        }
+        initTables();
+    </script>
+</body>
+</html>

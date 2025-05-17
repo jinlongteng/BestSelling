@@ -1,0 +1,252 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颉美智能 - 智能制造专家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- 导航 -->
+    <nav class="bg-blue-900 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-white text-2xl font-bold">颉美智能</a>
+                <!-- Hamburger (checkbox hack) -->
+                <input id="menu-toggle" type="checkbox" class="peer hidden" />
+                <label for="menu-toggle" class="md:hidden flex items-center cursor-pointer text-gray-200 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <!-- Menu -->
+                <div
+                    class="hidden md:flex items-center space-x-8 peer-checked:flex peer-checked:flex-col peer-checked:absolute peer-checked:top-16 peer-checked:left-0 peer-checked:w-full peer-checked:bg-blue-900 peer-checked:z-10">
+                    <a href="index.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">首页</a>
+                    <a href="about.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">关于我们</a>
+                    <a href="products.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">产品中心</a>
+                    <a href="cases.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">工程案例</a>
+                    <a href="support.html" class="block text-gray-300 hover:bg-blue-700 px-3 py-2 rounded-md">技术支持</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 首页内容 -->
+    <main>
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div id="container" style="display: 100%;height: 500px;"></div>
+
+            <div class="mb-16">
+                <h1 class=" text-center  text-4xl font-bold text-gray-900 mb-4">智能制造的创新领导者</h1>
+                <div class="max-w-2xl mx-auto bg-white/80 rounded-xl shadow-lg p-8 mb-8 border border-blue-100">
+                    <p class="text-xl text-gray-700 leading-relaxed text-left">
+                        <span class="inline-block align-middle text-blue-500 mr-2">
+                            <i class="fas fa-quote-left"></i>
+                        </span>
+                        颉美智能是一家专注于自动化领域，产品配套、智能制造、系统集成、产业升级的自动化企业。公司
+                        积累多年经验，同国内外多家知名厂商有较深入合作，为广大用户提供工业自动化领域前沿技术服务，
+                        更在电子、汽车、制药、包装、金属加工、医疗等行业拥有优质解决方案，依托技术开发、技术服务，
+                        逐步成为智能区块链企业优质服务商。
+                        <span class="inline-block align-middle text-blue-500 ml-2">
+                            <i class="fas fa-quote-right"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+                    <div class="mb-4">
+                        <img src="assets/images/homevision.jpeg" alt="Vision" class="w-10% h-10%">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 text-center">视觉解决方案和产品</h3>
+                    <p class="text-gray-600 text-center">为制造业提供智能化检测方案和视觉相关产品</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+                    <div class="mb-4">
+                        <img src="assets/images/homerobot.jpeg" alt="Vision" class="w-10% h-10%">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 text-center">工业机器人集成</h3>
+                    <p class="text-gray-600 text-center">机器人全栈集成能力，快速适配汽车、3C、仓储产线需求</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center">
+                    <div class="mb-4">
+                        <img src="assets/images/homeplc.jpeg" alt="Vision" class="w-10% h-10%">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 text-center">电气成套系统开发</h3>
+                    <p class="text-gray-600 text-center">涵盖配电柜、控制系统设计、研发与生产，具备从方案设计到安装调试的全流程服务能力</p>
+                </div>
+
+            </div>
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+
+                <!-- 使命部分 -->
+                <div class="mb-8">
+                    <div class="mb-4">
+                        <h2 class="text-xl font-bold mb-2">颉美使命</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            关注客户需求，用先进可靠的产品和优质增值服务，提升客户体验及满意度
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-3">
+                        <h3 class="text-lg font-semibold text-blue-600 mb-1">Mission</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Focus on customer needs, improve customer experience and satisfaction
+                            with advanced and reliable products and high-quality value added services
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 愿景部分 -->
+                <div>
+                    <div class="mb-4">
+                        <h2 class="text-xl font-bold mb-2">颉美愿景</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            智能制造系统优质服务商
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-3">
+                        <h3 class="text-lg font-semibold text-blue-600 mb-1">Vision</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Intelligent manufacturing system service provider
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('bg-blue-700');
+                link.classList.remove('hover:bg-blue-700');
+            }
+        });
+        // 获取容器元素
+        const container = document.getElementById('container');
+
+        // 初始化场景
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+            75,
+            container.clientWidth / container.clientHeight,  // 使用容器宽高比
+            0.1,
+            1000
+        );
+
+        // 初始化渲染器（设置 alpha: true 支持透明背景）
+        const renderer = new THREE.WebGLRenderer({
+            antialias: true,
+            alpha: true
+        });
+
+        // 设置渲染器尺寸为容器大小
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        // 将渲染器添加到容器中
+        container.appendChild(renderer.domElement);
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true; // 启用阻尼效果
+        controls.dampingFactor = 0.05; // 阻尼系数
+        controls.rotateSpeed = 0.5;    // 旋转速度
+        controls.zoomSpeed = 0.8;      // 缩放速度
+        controls.panSpeed = 0.4;       // 平移速度
+        // 自动旋转设置
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 1.5;
+
+        // 添加光源
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+
+        // 加载 GLB 模型
+        const loader = new THREE.GLTFLoader();
+        let model;
+
+        loader.load(
+            'assets/threemodels/visiononrobot.glb',  // 替换为你的模型路径
+            (gltf) => {
+                model = gltf.scene;
+                scene.add(model);
+
+                // 自动调整模型位置和缩放
+                const bbox = new THREE.Box3().expandByObject(model);
+                const center = bbox.getCenter(new THREE.Vector3());
+                const size = bbox.getSize(new THREE.Vector3());
+
+                // 将模型中心移动到原点
+                model.position.sub(center);
+
+                // 自动缩放以适应视图
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const cameraDistance = maxDim * 1.5;
+                camera.position.z = cameraDistance;
+
+                // 让相机指向模型中心
+                camera.lookAt(0, 0, 0);
+            },
+            (xhr) => {
+                console.log(`加载进度: ${(xhr.loaded / xhr.total * 100).toFixed(2)}%`);
+            },
+            (error) => {
+                console.error('加载错误:', error);
+            }
+        );
+
+        // 动画循环
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update(); // 更新控制器
+            // 旋转模型（可选）
+            if (model) {
+                model.rotation.y += 0.005;
+            }
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // 处理容器尺寸变化（需要主动触发）
+        function onContainerResize() {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            controls.handleResize();
+        }
+        // 添加交互提示
+        container.style.cursor = 'grab';
+        container.addEventListener('mousedown', () => {
+            container.style.cursor = 'grabbing';
+            controls.autoRotate = false; // 交互时停止自动旋转
+        });
+        container.addEventListener('mouseup', () => {
+            container.style.cursor = 'grab';
+            controls.autoRotate = true; // 释放后恢复自动旋转
+        });
+
+        // 监听窗口变化（可选）
+        window.addEventListener('resize', () => {
+            onContainerResize();
+        });
+    </script>
+</body>
+
+</html>
